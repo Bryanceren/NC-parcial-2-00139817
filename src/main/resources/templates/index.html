@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link href="css/materialize.css" type="text/css" rel="stylesheet"
+	media="screen,projection" />
+<link href="css/style.css" type="text/css" rel="stylesheet"
+	media="screen,projection" />
+<title>Inicio</title>
+</head>
+<body>
+
+	<div class="section no-pad-bot" id="index-banner">
+
+		<div class="container ">
+			 
+			 <br>
+			 <br>
+			 <br>
+			<div class="col s6 card grey lighten-3" id="insertarmain">
+				<br>
+				<h1 class="center">Menu principal</h1>
+				<br>
+				<h5 th:if = "${successcat}" class="green-text center">Categoria insertado con exito</h5>
+				<h5 th:if = "${successlib}" class="green-text center">Libro insertado con exito</h5>						
+				<br>
+				<br>				
+				<div class="row center">
+					<a class="btn waves-effect col s4 offset-s4 btn-large" th:href="@{/categoria}">
+						Insertar categoria<i class="material-icons right">add_circle</i>
+					</a>
+				</div>
+				<div class="row center">
+					<a class="btn waves-effect col s4 offset-s4 btn-large" th:href="@{/libro}">
+						Insertar libro<i class="material-icons right">library_add</i>
+					</a>
+				</div>
+				<div class="row center">
+					<a class="btn waves-effect col s4 offset-s4 btn-large" th:href="@{/listado}">
+						Ver libros<i class="material-icons right">filter_list</i>
+					</a>
+				</div>
+				<br>
+			</div>
+			<br>
+			<br>
+			  
+			          
+		</div>
+		<br>
+		<br>
+		<br>
+		
+	</div>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+</body>
+</html>
